@@ -12,6 +12,6 @@ package com.mycompany.mgty;
 public class MGTY {
 
     public static void main(String[] args) {
-        
+        System.out.println("hello!");
     }
 }
