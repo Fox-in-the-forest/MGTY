@@ -8,6 +8,22 @@ package lesson2;
  *
  * @author sugar
  */
-public class Trucks {
+public class Trucks extends Cars {
+    
+    private final int mProperty;
+    
+    public int getProperty() {
+        return mProperty;
+    }
+    
+
+    public Trucks(final int pHorsePower,final int pVolume,final String pRegNum,final int pProperty) {
+        super(pHorsePower, pVolume, pRegNum);
+        this.mProperty = pProperty;
+        
+    }
+
+
+
     
 }
