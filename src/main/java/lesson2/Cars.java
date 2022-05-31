@@ -11,7 +11,6 @@ import java.util.Optional;
  * @author sugar
  */
 public class Cars {
-    private static final String SFM_UNDEFINED = "UNDEFINED";
     
     private final int mHorsePower;
     private final int mVolume;
@@ -34,8 +33,11 @@ public class Cars {
         return mVolume;
     }
     public String getmRegNum() {
-        return Optional.ofNullable(mRegNum).orElse(SFM_UNDEFINED);
+        return Optional.ofNullable(mRegNum).orElse(Constants.SFM_UNDEFINED);
     }
+
+    
+    
     
     
 }
