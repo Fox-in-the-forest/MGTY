@@ -25,7 +25,7 @@ public class Main {
     public static void printCharacteristics(Bus pBus)
     {
         
-    }
+}
     public static void printCharacteristics(Trucks pBus)
     {
         
