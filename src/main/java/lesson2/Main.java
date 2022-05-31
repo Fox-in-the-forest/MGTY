@@ -17,6 +17,7 @@ public class Main {
         Trucks lTrucks1 = new Trucks(100, 100, "43678", 189);
         printCharacteristics(lBus1);
         printCharacteristics((Bus) lBus); // приведение типов!
+        System.out.println("");
     }
     
     
