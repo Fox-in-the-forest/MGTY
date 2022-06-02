@@ -10,7 +10,13 @@ import java.util.Optional;
  *
  * @author sugar
  */
-public class Cars {
+public abstract class Cars {
+
+    @Override
+    public String toString() {
+        return "Class: " + super.toString() + " Cars{" + "mHorsePower=" + mHorsePower + ", mVolume=" + mVolume + ", mRegNum=" + mRegNum + '}';
+    }
+    
     
     private final int mHorsePower;
     private final int mVolume;
@@ -36,6 +42,7 @@ public class Cars {
         return Optional.ofNullable(mRegNum).orElse(Constants.SFM_UNDEFINED);
     }
 
+    
     
     
     
