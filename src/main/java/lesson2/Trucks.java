@@ -23,6 +23,13 @@ public class Trucks extends Cars {
         
     }
 
+    @Override
+    public String toString() {
+        return super.toString()+ " Trucks{" + "mProperty=" + mProperty + '}';
+    }
+    
+    
+
 
 
     

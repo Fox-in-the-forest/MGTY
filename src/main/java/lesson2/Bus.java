@@ -25,6 +25,13 @@ public class Bus extends Cars{
         mProperty = pProperty;
     }
 
+    @Override
+    public String toString() {
+        return super.toString()+ " Bus{" + "mProperty=" + mProperty + '}';
+    }
+    
+    
+
 
     
     
