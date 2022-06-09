@@ -15,7 +15,7 @@ public class Bus extends Cars{
     
     private final String mProperty; 
 
-    public String getProperty() {
+    public String getProperty() { 
         return Optional.ofNullable(mProperty).orElse(Constants.SFM_UNDEFINED);
     }
     
@@ -24,11 +24,18 @@ public class Bus extends Cars{
         super(pHorsePower, pVolume, pRegNum);
         mProperty = pProperty;
     }
-
+ 
     @Override
     public String toString() {
         return super.toString()+ " Bus{" + "mProperty=" + mProperty + '}';
     }
+
+    @Override
+    public void printAdditionalProperty() {
+        System.out.println("Additional property "+ this.getProperty());
+    }
+
+
     
     
 

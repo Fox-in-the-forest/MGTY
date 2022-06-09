@@ -27,7 +27,16 @@ public class Trucks extends Cars {
     public String toString() {
         return super.toString()+ " Trucks{" + "mProperty=" + mProperty + '}';
     }
-    
+
+    @Override
+    public int getmVolume() {
+        return super.getmVolume()-10;
+    }
+
+    @Override
+    public void printAdditionalProperty() {
+        System.out.println("Additional property "+ this.getProperty());
+    }
     
 
 
