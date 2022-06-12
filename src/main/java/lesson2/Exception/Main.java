@@ -9,5 +9,7 @@ package lesson2.Exception;
  * @author sugar
  */
 public class Main {
-    
+    public static void main(String[] args) {
+        //Throwable ->   CheckException<- Ecxeption ->RuntimeException
+    }
 }
