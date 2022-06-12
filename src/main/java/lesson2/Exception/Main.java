@@ -10,6 +10,8 @@ package lesson2.Exception;
  */
 public class Main {
     public static void main(String[] args) {
-        //Throwable - Exceptio
+        //Throwable -> Exception - ->checkException + RuntimeException
+        
+        
     }
 }
