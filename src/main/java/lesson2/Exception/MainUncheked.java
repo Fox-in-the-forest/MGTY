@@ -4,9 +4,9 @@
  */
 package lesson2.Exception;
 
+import java.util.Objects;
 import java.util.Optional;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -17,7 +17,9 @@ public class MainUncheked {
     {
         //Class1 lClass1 = new Class1();
         //Optional.ofNullable(lClass1).map(Class1::getmClass2).map(Class2::getmClass3);// лямбда выражение разворачивается в eclipse       
-        make(); 
+        //make(); 
+        make10(null); 
+        
         
     }
     
@@ -42,5 +44,14 @@ public class MainUncheked {
     private static void make1() throws MainException
     {
         throw new MainException("Main Ecxeption");
+    }
+
+    private static void make10(String pValue) 
+    {
+        if(pValue == null)
+        {
+            //throw new IllegalArgumentException("Val: null");
+            String lValue = Objects.requireNonNull(pValue); 
+        }
     }
 }
