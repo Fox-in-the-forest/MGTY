@@ -2,7 +2,8 @@ package lesson3;
 
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("test lesson 03");
+		TestService lTestService = new TestClass();
+		lTestService.test2();
 	}
 
 }
