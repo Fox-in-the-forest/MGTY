@@ -12,7 +12,7 @@ import java.util.Optional;
 public class MainUncheked {
     public static void main(String[] args) 
     {
-        //Class1 lClass1 = new Class1();
+        Class1 lClass1 = new Class1();
         //Optional.ofNullable(lClass1).map(Class1::getmClass2).map(Class2::getmClass3);// лямбда выражение разворачивается в eclipse       
         //make(); 
         make10(null); 
