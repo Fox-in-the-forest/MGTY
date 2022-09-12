@@ -13,8 +13,15 @@ public class MainUncheked {
     public static void main(String[] args) 
     {
         Class1 lClass1 = new Class1();
-        //Optional.ofNullable(lClass1).map(Class1::getmClass2).map(Class2::getmClass3);// лямбда выражение разворачивается в eclipse       
-        //make(); 
+//        Optional.ofNullable(lClass1).map(Class1::getmClass2).map(t -> {
+//			try {
+//				return t.getmClass3();
+//			} catch (Exception e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		})
+        make(); 
         make10(null); 
         
         
