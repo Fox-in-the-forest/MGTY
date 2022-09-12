@@ -1,6 +1,8 @@
 package lesson03;
 
-public interface TestService2 {
+import java.io.Serializable;
+
+public interface TestService2 extends Serializable, Cloneable {
 	
 	void test1(String pString);
 	
