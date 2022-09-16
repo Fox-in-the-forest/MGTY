@@ -27,7 +27,7 @@ public class ForCollections {
 			index1++;
 		}
 		//do while
-		int index2 = 0;
+		int index2 = 0; 
 		do
 		{
 			pStringArray1[index2]= pStringArray1[index2]+" addNew";
@@ -42,7 +42,16 @@ public class ForCollections {
 	{
 		int index = 0;
 		//forEach
-		for(String lString: pStringArray1) {
+		for(String lString: pStringArray1) 
+		{
+			if(lString == null || lString.isEmpty() ) 
+			{
+				continue;
+			}
+			
+			if(index>=10) {
+				break;
+			}
 			System.out.println("VALUE: "+ lString);
 			if(index ==4) {
 				System.out.println("5:::VALUE: "+ lString);
