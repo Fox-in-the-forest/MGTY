@@ -11,7 +11,12 @@ public class TestClass implements TestService2 {
 
 	@Override
 	public void test2() {
-		// TODO Auto-generated method stub
+		try {
+			Object lObject = new TestClass();
+		}
+		catch(Exception e){
+			throw new IllegalStateException("", e);
+		}
 		
 	}
 
