@@ -7,7 +7,8 @@ public class ForCollections {
 	
 	public static void main(String[] args) 
 	{
-		String[] pStringArray1 = initArray(2);
+		final String[] pStringArray1 = initArray(20);
+		printArray(pStringArray1);
 	
 	}
 	
@@ -16,11 +17,17 @@ public class ForCollections {
 		String[] pStringArray1 = new String[pSize];
 		for(int i = 0; i<pStringArray1.length; i++) {
 			pStringArray1[i] = String.valueOf("AAFFF");
-			System.out.println(pStringArray1[i]);
+			
 		}
 		
 		return pStringArray1; 
 	}
  	
+	public static void printArray(final String[] pStringArray1) 
+	{
+		for(String lString: pStringArray1) {
+			System.out.println("OUR VALUE: "+ lString);
+		}
+	}
 }
 
