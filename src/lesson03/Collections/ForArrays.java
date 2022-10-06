@@ -29,7 +29,8 @@ public class ForArrays {
 		
 		
 		//через создание потребителя (consumer)
-		Consumer<? super String> lConsumer = pString -> {
+		Consumer<? super String> lConsumer = pString -> 
+		{
 			System.out.println(pString);
 		};
 		lStringIterable.forEach(lConsumer);
@@ -38,14 +39,21 @@ public class ForArrays {
 		lStringIterable.forEach(pString -> System.out.println(pString));
 		
 		//со ссылкой на метод
-		lStringIterable.forEach(ForArrays::printString);
-		 
+		lStringIterable.forEach(ForArrays::printString); 
+		  
 
+		Consumer lConsumer1 = new CustomConsumer();
+		for(String lString: lStringIterable) 
+		{
+			lConsumer.accept(lString );	
+		}
+		
+		 
 		//java1.8-
 		Iterator<String> lIterator = lStringIterable.iterator();
 		while(lIterator.hasNext()) 
 		{
-			String lString = lIterator.next();
+			String lString = lIterator.next();  
 			System.out.println(lString);
 		}
 	
