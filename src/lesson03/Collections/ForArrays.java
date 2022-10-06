@@ -3,7 +3,9 @@ package lesson03.Collections;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.Optional;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 
 
@@ -15,6 +17,17 @@ public class ForArrays {
 		Iterable<String> lStringIterable = new ArrayList(200);
 		
 		//java 1.8+
+		
+		//через supplier
+		Optional.ofNullable(lStringIterable).orElseGet(ArrayList::new);  
+	
+		Supplier<? extends Iterable<String>> Supplier = ()->{
+			return new ArrayList<>();
+		};
+		
+		Optional.ofNullable(lStringIterable).orElseGet(Supplier);  
+		
+		
 		//через создание потребителя (consumer)
 		Consumer<? super String> lConsumer = pString -> {
 			System.out.println(pString);
@@ -37,7 +50,7 @@ public class ForArrays {
 		}
 	
 	}
-	
+	 
 	
 	public static void printString(String pString) 
 	{
