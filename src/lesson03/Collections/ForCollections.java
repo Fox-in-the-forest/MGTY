@@ -9,7 +9,6 @@ public class ForCollections {
 	{
 		final String[] pStringArray1 = initArray(20);
 		printArray(pStringArray1);
-	
 	}
 	
 	public static String[] initArray(final int pSize) {
@@ -34,10 +33,27 @@ public class ForCollections {
 			index2++;
 		} 
 		while(index2<pStringArray1.length);
-		
+		//pStringArray1[32] = "AG";
 		return pStringArray1; 
 	}
  	
+	//массив на основе другого
+	public static String[] increaseArray(final String[] pStringArray1, int pSize) 
+	{
+		if(pSize< pStringArray1.length) 
+		{
+			throw new IllegalStateException();
+		}
+		
+		String[] lStringArray = new String[pSize];
+		
+		for(int index = 0; index<pStringArray1.length; index++) 
+		{
+			lStringArray[index] = pStringArray1[index];
+		}
+		return lStringArray;
+	}
+	
 	public static void printArray(final String[] pStringArray1) 
 	{
 		int index = 0;
