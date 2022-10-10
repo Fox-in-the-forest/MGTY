@@ -45,7 +45,7 @@ public class ForArrays {
 		Consumer lConsumer1 = new CustomConsumer();
 		for(String lString: lStringIterable) 
 		{
-			lConsumer.accept(lString );	
+			lConsumer.accept(lString);	
 		}
 		
 		 
