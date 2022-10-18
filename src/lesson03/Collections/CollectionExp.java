@@ -29,7 +29,17 @@ public class CollectionExp {
 	
 	public static void workCollection(Collection <String> pValue) {
 		
-		pValue.add("");
+		Collection<String> lCollection = new ArrayList<>();
+		Collection<String> lPvalue = new ArrayList<>(pValue);
+		
+		//создание уникальных значений в коллекции
+		lPvalue.removeAll(lCollection);
+		lCollection.addAll(lPvalue);
+		
+		
+		pValue.add("AAA");
+		
+		
 	} 
 }
   
