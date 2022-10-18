@@ -32,8 +32,16 @@ public class WorkWithCollection2 {
 		lStr = filterCollection(lStr);
 		System.out.println(lStr);
 		
+		lStr = appendCollection(lStr);
+		System.out.println(lStr);
+		
+		
 		ValueHolder lValueHolder = new ValueHolder();
 		lValueHolder.addElement("aa");
+		
+		//Arrays.stream(lValueHolder.getStringArray(lStrRemove)).filter(null); // правильная работа
+
+		
 		//lValueHolder.getUnmodifiableCollection().add("aaaaa");//изм енение немодиф. объекта
 		System.out.println(Arrays.toString(lValueHolder.getStringArray(lStrRemove)));
 		lValueHolder.getStringArray(lStrRemove);
@@ -42,10 +50,14 @@ public class WorkWithCollection2 {
 
 	public static Collection<String> filterCollection(final Collection<String> pValue) 
 	{	
-		//Collection<String> lStr1 = lStrRemove.stream().filter(pS -> pS.equals("a")).collect(Collectors.toCollection(ArrayList::new));
+		//Collection<String> lStr1 = lStrRemove.stream().filte r(pS -> pS.equals("a")).collect(Collectors.toCollection(ArrayList::new));
 		//System.out.println(lStr.stream().filter(pS -> pS.equals("a")).collect(Collectors.toCollection(ArrayList::new)));
 		//System.out.println(pValue.stream().filter(Objects::nonNull).filter(pS -> pS.equals("a")).collect(Collectors.toCollection(ArrayList::new)));
 			return pValue.stream().filter(Objects::nonNull).filter(pS -> !pS.equals("a")).collect(Collectors.toCollection(ArrayList::new));
 			
+	}
+	public static Collection<String> appendCollection(final Collection<String> pValue) 
+	{	
+			return pValue.stream().filter(Objects::nonNull).map(pS -> pS+"-SUFFIX").collect(Collectors.toCollection(ArrayList::new));
 	}
 }
