@@ -29,6 +29,10 @@ public class ValueHolder {
 	{
 		return Collections.unmodifiableCollection(this.getmValueCollection());
 	}
-	
 
+	public String[] getStringArray(Collection<String> pValue) {
+		return this.getmValueCollection().toArray(new String[0]);
+		
+		  
+	}
 }

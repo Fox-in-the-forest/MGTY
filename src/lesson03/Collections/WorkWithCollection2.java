@@ -1,6 +1,7 @@
 package lesson03.Collections;
 
 import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
@@ -33,8 +34,10 @@ public class WorkWithCollection2 {
 		
 		ValueHolder lValueHolder = new ValueHolder();
 		lValueHolder.addElement("aa");
-		lValueHolder.getUnmodifiableCollection().add("aaaaa");
-			
+		//lValueHolder.getUnmodifiableCollection().add("aaaaa");//изм енение немодиф. объекта
+		System.out.println(Arrays.toString(lValueHolder.getStringArray(lStrRemove)));
+		lValueHolder.getStringArray(lStrRemove);
+
 	}
 
 	public static Collection<String> filterCollection(final Collection<String> pValue) 
