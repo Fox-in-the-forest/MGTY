@@ -28,14 +28,21 @@ public class WorkWithCollection {
 			
 			if(Objects.equals(lString, "a")) 
 			{
+				lStrRemove.add(lString); 
+			}
+			if(Objects.equals(lString, "b")) 
+			{
 				lStrRemove.add(lString);
 			}
-			
 		}
 		lStr.removeAll(lStrRemove);
 		//выбрасывается исключение java.util.ConcurrentModificationException 
 		//попытка параллельного изменения 
 		System.out.println("Coll after : " + lStr);
+		
+		// для работы с элементами stream
+		
+		
 	}
 
 }

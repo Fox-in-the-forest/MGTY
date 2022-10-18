@@ -26,21 +26,23 @@ public class WorkWithCollection2 {
 		lStr.add("t");
 		lStr.add(null);
 		Collection<String> lStrRemove = new ArrayList<>();
-		// для работы с элементами Stream
+		// для работы с элементами в Stream
 		
-		filterCollection(lStr);
+		lStr = filterCollection(lStr);
 		System.out.println(lStr);
+		
+		ValueHolder lValueHolder = new ValueHolder();
+		lValueHolder.addElement("aa");
+		lValueHolder.getUnmodifiableCollection().add("aaaaa");
+			
 	}
 
-	public static void filterCollection(Collection<String> pValue) 
+	public static Collection<String> filterCollection(final Collection<String> pValue) 
 	{	
 		//Collection<String> lStr1 = lStrRemove.stream().filter(pS -> pS.equals("a")).collect(Collectors.toCollection(ArrayList::new));
 		//System.out.println(lStr.stream().filter(pS -> pS.equals("a")).collect(Collectors.toCollection(ArrayList::new)));
 		//System.out.println(pValue.stream().filter(Objects::nonNull).filter(pS -> pS.equals("a")).collect(Collectors.toCollection(ArrayList::new)));
-			Collection<String> lStr = pValue.stream().filter(Objects::nonNull).filter(pS -> !pS.equals("a")).collect(Collectors.toCollection(ArrayList::new));
-
-			pValue.clear();
-			pValue.addAll(lStr);
+			return pValue.stream().filter(Objects::nonNull).filter(pS -> !pS.equals("a")).collect(Collectors.toCollection(ArrayList::new));
 			
 	}
 }
