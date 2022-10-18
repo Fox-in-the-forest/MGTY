@@ -21,6 +21,7 @@ public class WorkWithCollection {
 		lStr.add("h");
 		lStr.add("j");
 		lStr.add("t");
+		Collection<String> lStr = new ArrayList<>();
 		
 		for(String lString: lStr) 
 		{
@@ -31,6 +32,8 @@ public class WorkWithCollection {
 			
 			lStr.add("ddff");
 		}
+		//выбрасывается исключение java.util.ConcurrentModificationException 
+		//попытка параллельного изменения  
 	}
 
 }
