@@ -28,10 +28,19 @@ public class WorkWithCollection2 {
 		Collection<String> lStrRemove = new ArrayList<>();
 		// для работы с элементами Stream
 		
-		//Collection<String> lStr1 = lStrRemove.stream().filter(pS -> pS.equals("a")).collect(Collectors.toCollection(ArrayList::new));
-		//System.out.println(lStr.stream().filter(pS -> pS.equals("a")).collect(Collectors.toCollection(ArrayList::new)));
-		System.out.println(lStr.stream().filter(Objects::nonNull).filter(pS -> pS.equals("a")).collect(Collectors.toCollection(ArrayList::new)));
-
+		filterCollection(lStr);
+		System.out.println(lStr);
 	}
 
+	public static void filterCollection(Collection<String> pValue) 
+	{	
+		//Collection<String> lStr1 = lStrRemove.stream().filter(pS -> pS.equals("a")).collect(Collectors.toCollection(ArrayList::new));
+		//System.out.println(lStr.stream().filter(pS -> pS.equals("a")).collect(Collectors.toCollection(ArrayList::new)));
+			System.out.println(pValue.stream().filter(Objects::nonNull).filter(pS -> pS.equals("a")).collect(Collectors.toCollection(ArrayList::new)));
+			Collection<String> lStr = pValue.stream().filter(Objects::nonNull).filter(pS -> !pS.equals("a")).collect(Collectors.toCollection(ArrayList::new));
+
+			pValue.add("AHH");
+			pValue.add("AHH1");
+			
+	}
 }
