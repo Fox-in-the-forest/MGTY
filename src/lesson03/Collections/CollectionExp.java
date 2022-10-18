@@ -26,5 +26,10 @@ public class CollectionExp {
 	{
 		pValue.forEach(pS -> System.out.println(pS));
 	}
+	
+	public static void workCollection(Collection <String> pValue) {
+		
+		pValue.add("");
+	} 
 }
- 
+  
