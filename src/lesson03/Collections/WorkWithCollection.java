@@ -21,19 +21,21 @@ public class WorkWithCollection {
 		lStr.add("h");
 		lStr.add("j");
 		lStr.add("t");
-		Collection<String> lStr = new ArrayList<>();
-		
+		Collection<String> lStrRemove = new ArrayList<>();
+		System.out.println("Coll before : " + lStr);
 		for(String lString: lStr) 
 		{
+			
 			if(Objects.equals(lString, "a")) 
 			{
-				lStr.remove(lString);
+				lStrRemove.add(lString);
 			}
 			
-			lStr.add("ddff");
 		}
+		lStr.removeAll(lStrRemove);
 		//выбрасывается исключение java.util.ConcurrentModificationException 
-		//попытка параллельного изменения  
+		//попытка параллельного изменения 
+		System.out.println("Coll after : " + lStr);
 	}
 
 }
