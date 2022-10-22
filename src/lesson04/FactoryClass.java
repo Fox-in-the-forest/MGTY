@@ -2,28 +2,34 @@ package lesson04;
 
 public class FactoryClass implements FactoryClassService {
 	
-	private final String mName;
-	private final String mValue;
-	
+	private  String mName;
+	private  String mValue;
+	private int mAge =0;
+
 	private FactoryClass() {
 		super();
-		mName = "DEFAULT";
-		mValue = "DEFAULT";
+
 	}
 	
-	private FactoryClass (final String pName, final String pValue) {
+	private FactoryClass ( String pName,  String pValue,  int pAge) {
 		super();
-		mName = "DEFAULT";
-		mValue = "DEFAULT";
+		mName = pName;
+		mValue = pValue;
+		mAge = pAge;
 	}
 	
 	public static FactoryClassService createInstance() {
 		return new FactoryClass();
 	}
 	
-	public static FactoryClassService createInstanceWithParameters(String pName, String pValue) {
-		FactoryClass lInstance = new FactoryClass(pName, pValue);
+	public static FactoryClassService createInstanceWithParameters(String pName, String pValue, int pAge) {
+		FactoryClass lInstance = new FactoryClass();
 		//lInstance.getClass().getConstructor();
+		lInstance.mName = pName;
+		lInstance.mValue = pValue;
+		lInstance.mAge = pAge;
+		
+		
 		return lInstance;
 	}
 } 
