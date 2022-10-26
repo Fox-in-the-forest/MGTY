@@ -5,11 +5,63 @@ public final class FactoryClass implements FactoryClassService {
 	private  String mName;
 	private  String mValue;
 	private int mAge =0;
+	
+	public static class Builder
+	{
+		private  String mValue= "DEFAULT" ;
+		private int mAge =0;
+		private  String mName = "DEFAULT";
+		
+		
+		public Builder setmName(String mName) {
+			this.mName = mName;
+			return this;
+		}
+		public Builder setmValue(String mValue) {
+			this.mValue = mValue;
+			return this;
+		}
+		public Builder setmAge(int mAge) {
+			this.mAge = mAge;
+			return this;
+		}
+		
+		
+		private String getmName() {
+			return mName;
+		}
+		private String getmValue() {
+			return mValue;
+		}
+		private int getmAge() {
+			return mAge;
+		}
 
+		public FactoryClassService build() 
+		{
+			return createInstanceWithParameters(this.mName, this.mValue, this.mAge);
+		}
+		
+		Builder()
+		{
+			
+		}
+	
+
+	}
+	
+	public static FactoryClass.Builder builder()
+	{
+		return new Builder();
+	}
+	
+	 
 	 public FactoryClass() {
 		super(); 
  
 	}
+	 
+
 	
 	private FactoryClass (String pName, String pValue, int pAge) {
 		super();
@@ -18,11 +70,11 @@ public final class FactoryClass implements FactoryClassService {
 		setAge(pAge);
 	}
 	
-	public static FactoryClassService createInstance() {
+	private static FactoryClassService createInstance() {
 		return new FactoryClass();
 	}
 	
-	public static FactoryClassService createInstanceWithParameters(String pName, String pValue, int pAge) {
+	private static FactoryClassService createInstanceWithParameters(String pName, String pValue, int pAge) {
 		FactoryClassService lInstance = new FactoryClass();
 		//lInstance.getClass().getConstructor();
 		lInstance.setName(pName);

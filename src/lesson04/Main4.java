@@ -8,5 +8,7 @@ public class Main4
 	FactoryClassService lfc1 = new FactoryClass();
 	
 	String lStr1 = FactoryClass.createInstance().Submit(); // фабричный метод
+	
+	FactoryClassService lInstance = FactoryClass.builder().setmAge(0).setmName("Name").setmValue("Value").build();//метод строитель 
 	}
 }
