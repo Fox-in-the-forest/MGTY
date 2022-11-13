@@ -44,7 +44,7 @@ public final class FactoryClass implements FactoryClassService {
 		
 		Builder()
 		{
-			
+			super();
 		}
 	
 
