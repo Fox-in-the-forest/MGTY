@@ -47,7 +47,7 @@ public class Main2 {
 	};
 	lMap.forEach(BiConsumer); 
 	
-	//схлопывание
-	lMap.forEach((pI, pS1)->System.out.println(pI+":"+pS1)); 
+	//схлопывание!
+	lMap.forEach((pI, pS1)->System.out.println(pI+":"+pS1));
 	}
 }
