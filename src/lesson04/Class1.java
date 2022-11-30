@@ -10,4 +10,11 @@ public class Class1 {
 	public Collection<Class2> getmClass2Collection() {
 		return Optional.ofNullable(mClass2Collection).orElseGet(()-> mClass2Collection= new ArrayList());
 	}
+
+	@Override
+	public String toString() {
+		return "Class1 [mClass2Collection=" + mClass2Collection + "]";
+	}
+	
+	
 }

@@ -13,5 +13,12 @@ public class Class2 {
 	public void setmString(String mString) {
 		this.mString = mString;
 	}
+
+	@Override
+	public String toString() {
+		return "Class2 [mString=" + getmString()  + "]";
+	}
+	
+	
 	
 }
